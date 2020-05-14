@@ -26,17 +26,17 @@ Zookeeper is used to provide High Availability. Each slave has a znode associate
 <br>
 # Instructions to run
 In users instance, the following commands are used to create and run the user container<br>
-docker build -t users:latest .<br>
+```
+docker build -t users:latest .
 docker run -i -p 80:5000 --name users -d users
-<br>
-<br>
+```
 In rides instance, the following commands are used to create and run the user container<br>
-docker build -t rides:latest .<br>
+```
+docker build -t rides:latest .
 docker run -i -p 80:5000 --name users -d rides
-<br>
-<br>
+```
 In the DBaaS instance, the following command is used to start all the containers<br>
-docker compose up --build
+`docker compose up --build`
 <br>
 <br>
 Requests can then be sent in postman to the respective instances to perform the required tasks.
